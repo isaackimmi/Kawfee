@@ -54,7 +54,7 @@ indexGetUserLocation = () => {
   if (cafes.length > 0) {
     var inputGroup = document.getElementById("next-page-href-locator");
     var goToNextPage = document.createElement("a");
-    goToNextPage.href = "https://isaackimmi.github.io/results.html";
+    goToNextPage.href = "isaackimmi.github.io/results.html";
 
     goToNextPage.appendChild(getUserLocationBtn);
     inputGroup.appendChild(goToNextPage);
