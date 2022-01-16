@@ -56,6 +56,8 @@ indexGetUserLocation = () => {
     var goToNextPage = document.createElement("a");
     goToNextPage.href = "results.html";
 
+    console.log(goToNextPage);
+
     goToNextPage.appendChild(getUserLocationBtn);
     inputGroup.appendChild(goToNextPage);
   }
