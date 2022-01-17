@@ -163,6 +163,7 @@ async function renderCards() {
       cardText.appendChild(distanceText);
 
       const goToCheckIn = document.createElement("a");
+      goToCheckIn.href = "checkin.html";
       const checkInBtnSpan = document.createElement("span");
       checkInBtnSpan.id = "check-in-page-href";
       const checkInBtn = document.createElement("button");
@@ -176,8 +177,6 @@ async function renderCards() {
 
       checkInBtn.appendChild(checkInIcon);
       goToCheckIn.appendChild(checkInBtn);
-      checkInBtnSpan.appendChild(goToCheckIn);
-      goToCheckIn.href = "checkin.html";
       checkInBtnSpan.appendChild(goToCheckIn);
       checkInBtn.onclick = () => {
         checkInId = checkInIcon.id;
