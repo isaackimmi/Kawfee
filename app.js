@@ -56,8 +56,6 @@ indexGetUserLocation = () => {
     var goToNextPage = document.createElement("a");
     goToNextPage.href = "results.html";
 
-    console.log(goToNextPage);
-
     goToNextPage.appendChild(getUserLocationBtn);
     inputGroup.appendChild(goToNextPage);
   }
@@ -88,7 +86,6 @@ function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
       cafes.push(results[i]);
-      console.log(cafes[i]);
     }
 
     cafes.forEach((element) => {
