@@ -14,15 +14,6 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
 
-// db.collection("kawfees")
-//   .get()
-//   .then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//       // doc.data() is never undefined for query doc snapshots
-//       //console.log(doc.id, " => ", doc.data());
-//     });
-//   });
-
 // Targetting the SEARCH BAR and using it to set USER LOCATION
 var userLatitude;
 var userLongitude;
@@ -33,21 +24,6 @@ var getUserLocationBtn = document.getElementById(
 
 var cafes = [];
 var checkInId;
-
-// saveInput = () => {
-//   var searchBar = document.getElementById("results-search-bar-input").value;
-//   if (userLatitude == null || userLongitude == null) {
-//     alert("Choose your location");
-//   } else {
-//     var inputGroup = document.getElementById("next-page-href-search");
-//     var submitBtn = document.getElementById("submit-btn");
-//     var goToNextPage = document.createElement("a");
-//     goToNextPage.href = "/results.html";
-
-//     goToNextPage.appendChild(submitBtn);
-//     inputGroup.appendChild(goToNextPage);
-//   }
-// };
 
 saveUserLocation = (position) => {
   userLatitude = position.coords.latitude;
@@ -65,7 +41,7 @@ getUserLocation = () => {
 
   var inputGroup = document.getElementById("next-page-href-locator");
   var goToNextPage = document.createElement("a");
-  goToNextPage.href = "/results.html";
+  goToNextPage.href = "results.html";
 
   goToNextPage.appendChild(getUserLocationBtn);
   inputGroup.appendChild(goToNextPage);
@@ -202,7 +178,7 @@ async function renderCards() {
       goToCheckIn.appendChild(checkInBtn);
       checkInBtnSpan.appendChild(goToCheckIn);
       checkInBtn.onclick = () => {
-        goToCheckIn.href = "/checkin.html";
+        goToCheckIn.href = "checkin.html";
         checkInBtnSpan.appendChild(goToCheckIn);
         checkInId = checkInIcon.id;
         localStorage.setItem("checkInId", checkInIcon.id);
