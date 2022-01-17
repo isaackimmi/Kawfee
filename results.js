@@ -177,7 +177,7 @@ async function renderCards() {
       checkInBtn.appendChild(checkInIcon);
       goToCheckIn.appendChild(checkInBtn);
       checkInBtnSpan.appendChild(goToCheckIn);
-      goToCheckIn.href = "/checkin.html";
+      goToCheckIn.href = "checkin.html";
       checkInBtnSpan.appendChild(goToCheckIn);
       checkInBtn.onclick = () => {
         checkInId = checkInIcon.id;
