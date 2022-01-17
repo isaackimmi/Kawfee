@@ -79,11 +79,11 @@ calculateDistanceToCafe = () => {
     cafeLocation
   );
 
-  console.log(distancetoCafe);
-
   if (distanceToCafe != undefined) {
     checkInBtn.disabled = false;
   }
+
+  console.log(distanceToCafe);
 };
 
 calculateUserLocation();
@@ -91,7 +91,7 @@ renderInfo();
 
 async function kawfeeCheckIn() {
   try {
-    if (distanceToCafe <= 3) {
+    if (distanceToCafe <= 200) {
       await db
         .collection("kawfees")
         .doc(kawfeeId)
