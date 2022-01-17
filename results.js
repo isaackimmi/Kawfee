@@ -177,9 +177,9 @@ async function renderCards() {
       checkInBtn.appendChild(checkInIcon);
       goToCheckIn.appendChild(checkInBtn);
       checkInBtnSpan.appendChild(goToCheckIn);
+      goToCheckIn.href = "/checkin.html";
+      checkInBtnSpan.appendChild(goToCheckIn);
       checkInBtn.onclick = () => {
-        goToCheckIn.href = "/Kawfee/checkin.html";
-        checkInBtnSpan.appendChild(goToCheckIn);
         checkInId = checkInIcon.id;
         localStorage.setItem("checkInId", checkInIcon.id);
         localStorage.setItem("latitude", data.latitude);
