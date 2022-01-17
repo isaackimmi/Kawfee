@@ -91,7 +91,7 @@ renderInfo();
 
 async function kawfeeCheckIn() {
   try {
-    if (distanceToCafe <= 0.1) {
+    if (distanceToCafe <= 3) {
       await db
         .collection("kawfees")
         .doc(kawfeeId)
